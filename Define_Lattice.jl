@@ -20,17 +20,18 @@ end
 
   sublattice number: N
   sublattice (spin/orbital) degree of freedom: m
-  lattice dimension: x * y
-  Hamiltonian matrix dimension: x * y * N * m
+  lattice dimension: x * y * z
+  Hamiltonian matrix dimension: x * y * z * N * m
 """
 
-function make_lattice(x::Int64, y::Int64 ; N = 1, m = 1)
+function make_lattice(;x::Int64, y::Int64, z::Int64 = 1, N = 1, m = 1)
 
-  LatSize = [x,y];
+  LatSize = [x,y,z];
     # system size
-  MatDim = x * y * N * m;
+  MatDim = x * y * z *  N * m;
     # Hamiltonian matrix dimension
   Hamiltonian = zeros(Float64, MatDim, MatDim);
     # Hamiltonian matrix
   return LatticeSystem(N,m, LatSize, Hamiltonian, MatDim);
 end
+
