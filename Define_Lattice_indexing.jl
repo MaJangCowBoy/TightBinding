@@ -35,7 +35,7 @@ end
 function neighboring(mylat::LatticeSystem, R₀::Array{Int64}, dR::Array{Int64})
 
   if length(R₀) != 2 || length(dR) != 2
-    error("r must be a 2-element array");
+    error("R₀ and dR must be a 2-element array");
   end
 
   x = mylat.lattice_dimension[1];   y = mylat.lattice_dimension[2];

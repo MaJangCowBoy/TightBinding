@@ -16,7 +16,7 @@
 function make_hamiltonian(mylat::LatticeSystem, t::Float64, dR::Array{Int64}; N₀ = 1, m₀ = 1, N₁ = 1, m₁ = 1)
 
   if length(dR) != 2
-    error("dr must be a 2-element array");
+    error("dR must be a 2-element array");
   end
 
   x = mylat.lattice_dimension[1];   y = mylat.lattice_dimension[2];
