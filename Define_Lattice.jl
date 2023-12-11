@@ -10,7 +10,7 @@ struct LatticeSystem
   sublattice::Int64
   spin_orbital::Int64
   lattice_dimension::Array{Int64}
-  Hamiltonian::Array{Float64,2}
+  Hamiltonian::Array{ComplexF64,2}
   Matdim::Int64
 end
 
