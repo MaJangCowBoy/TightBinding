@@ -1,3 +1,5 @@
+using LinearAlgebra
+
 """
   function make_hopping is constructed in a following way.
   Input: mylat::LatticeSystem, t::Float64, dr::Array{Int64}
@@ -72,7 +74,7 @@ end
 
 """
 
-function make_SOC_hopping(mylat::LatticeSystem, λ::Float64, nᵢⱼ::Array{Float64}, dR::Array{Int64}; N₀ = 1, N₁ = 1)
+function make_SOC_hopping(mylat::LatticeSystem, λ::Float64, nᵢⱼ::Vector{Float64}, dR::Array{Int64}; N₀ = 1, N₁ = 1)
   
   if length(dR) != 3
     error("dR must be a 3-element array");
