@@ -28,10 +28,9 @@ function make_lattice(;x::Int64, y::Int64, z::Int64 = 1, N = 1, m = 1)
 
   LatSize = [x,y,z];
     # system size
-  MatDim = x * y * z *  N * m;
+  MatDim = x * y * z * N * m;
     # Hamiltonian matrix dimension
   Hamiltonian = zeros(Float64, MatDim, MatDim);
     # Hamiltonian matrix
   return LatticeSystem(N,m, LatSize, Hamiltonian, MatDim);
 end
-

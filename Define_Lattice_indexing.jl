@@ -84,8 +84,7 @@ function neighboring(mylat::LatticeSystem, R₀::Array{Int64}, dR::Array{Int64})
   end
 
   R₁ = R₀ + dR;  R₁ = mod1.(R₁, (x,y,z));
-  R₂ = R₀ - dR;  R₂ = mod1.(R₂, (x,y,z));
 
-  return R₁, R₂;
+  return R₁;
 
 end
